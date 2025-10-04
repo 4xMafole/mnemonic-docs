@@ -1,0 +1,5 @@
+{
+  "name": "Mnemonic Computing Specification",
+  "description": "An interactive web viewer for the Mnemonic Computing Specification v0.1, transforming the technical document into a beautifully formatted and navigable website.",
+  "requestFramePermissions": []
+}
