@@ -84,9 +84,14 @@ export const ArchitectureDiagram: React.FC = () => {
                                   }}
                               >
                                   <h3 className="text-center font-bold text-sky-400 text-base md:text-lg">{layer.name}</h3>
-                                  <p className="text-center text-xs text-slate-400 mt-1 mb-4 hidden md:block">{layer.description}</p>
                                   
-                                  <div className="flex flex-wrap justify-center gap-2 mt-2">
+                                  <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isHovered ? 'max-h-24 opacity-100 mt-2 mb-4' : 'max-h-0 opacity-0'}`}>
+                                    <p className="text-center text-xs text-slate-400 hidden md:block">
+                                        {layer.description}
+                                    </p>
+                                  </div>
+                                  
+                                  <div className="flex flex-wrap justify-center gap-2">
                                       {layer.components.map(comp => (
                                           <div key={comp} className="bg-slate-800/80 border border-slate-700/50 px-3 py-1.5 rounded-full text-center">
                                               <p className="text-xs md:text-sm text-slate-300 whitespace-nowrap">{comp}</p>
